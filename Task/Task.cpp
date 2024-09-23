@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 
 // 지금만들라고 하는 함수들은
-// strlen
+// strlen 11
 
 int StringCount(const char* const _Str)
 {
