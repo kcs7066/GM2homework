@@ -9,15 +9,11 @@ int NumberCount(int _Value)
 {
     // /(나누기를 최대한) 연산을 사용하세요.
     int Result = 0;
-    while (true)
+    while (_Value)
     {
       _Value = _Value / 10;
       Result = Result + 1;
 
-      if (_Value == 0)
-      {
-          break;
-      }
     }
 
     return Result;
