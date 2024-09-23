@@ -11,8 +11,8 @@ int NumberCount(int _Value)
     int Result = 0;
     while (_Value)
     {
-      _Value = _Value / 10;
-      Result = Result + 1;
+      _Value /= 10;
+      Result += 1;
 
     }
 
