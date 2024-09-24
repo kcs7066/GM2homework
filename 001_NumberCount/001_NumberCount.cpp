@@ -23,12 +23,23 @@ int NumberCount(int _Value)
 // 내 기준으로 지금
 // _Value 를 넣어주면 Buffer에 
 // 숫자를 문자열로 만드는 함수.
+const int IntMaxCount = 10;
 void NumberToString(char* Buffer, int BufferSize, int _Value)
 {
+    int NumberCountValue = NumberCount(_Value);
+
+    while(_Value)
+    {
+        NumberCountValue -= 1;
+        Buffer[NumberCountValue] = (_Value % 10) + '0';
+        _Value /= 10;
+    }
+   
     return;
 }
 
 int main()
+
 {
     // 5
     int Result0 = NumberCount(12358);
@@ -43,5 +54,7 @@ int main()
 
     NumberToString(Buffer, 100, 3712);
     // Buffer == "3712"
+
+
     int a = 0;
 }
