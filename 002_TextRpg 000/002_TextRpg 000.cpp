@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <conio.h>
 
 const int LINECOUNT = 50;
 
@@ -88,6 +89,16 @@ void MonsterStatusRender()
     StatusRender(MonsterName, MonsterAtt, MonsterHp);
 }
 
+void Damage( int& _DefHp, int _Att)
+{
+    _DefHp -= _Att;
+}
+
+void DamagePrint(const char* const _AttName, const char* const _DefName, int _Att)
+{
+   // 랜더링
+    printf_s("%s 가 %s를 공격해서 %d의 데미지를 입혔습니다.\n", _AttName, _DefName, _Att);
+}
 int main()
 {
     // char Test0[100] = "Player";
@@ -97,11 +108,34 @@ int main()
     CreatePlayer("1", 10, 100);
     CreateMonster("Orc", 10, 50);
 
-    PlayerStatusRender();
-    MonsterStatusRender();
+    while (true)
+    {
+        // 화면 전체를 지워라.
+        // 콘솔창에 다른 프로그램를 실행해주는 프로그램
+        system("cls");
 
-    // printf_s("싸운다");
-    // 나는 이걸 플레이어라고 생각할 겁니다.
+        char Input = ' ';
 
+        PlayerStatusRender();
+        MonsterStatusRender();
+        Input = _getch();
 
+        
+        Damage( MonsterHp, PlayerAtt);
+        system("cls");
+        PlayerStatusRender();
+        MonsterStatusRender();
+        DamagePrint(PlayerName, MonsterName, PlayerAtt);
+       
+
+        Input = _getch();
+
+        Damage(PlayerHp, MonsterAtt);
+        system("cls");
+        PlayerStatusRender();
+        MonsterStatusRender();
+        DamagePrint(PlayerName, MonsterName, PlayerAtt);
+        DamagePrint(MonsterName, PlayerName, MonsterAtt);
+        Input = _getch();
+    }
 }
