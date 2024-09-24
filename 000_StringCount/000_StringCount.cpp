@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <stdlib.h>
 
 // 지금만들라고 하는 함수들은
 // strlen
@@ -20,6 +21,6 @@ int main()
     // [B][B][B][B][0]
 
     int Count = StringCount("BBBB");
-
+    int b = rand();
     int a = 0;
 }
