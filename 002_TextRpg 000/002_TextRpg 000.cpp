@@ -63,6 +63,7 @@ void CreateMonster(const char* const _Ptr, int _Att, int _Hp, int _Speed)
 void StatusRender(const char* _Name, int _Att, int _HP)
 {
     printf_s("%s Status", _Name);
+
     int nameLineCount = LINECOUNT - strlen(_Name) - strlen(" Status");
     for (int i = 0; i < nameLineCount; i += 1)
     {

@@ -21,6 +21,5 @@ int main()
     // [B][B][B][B][0]
 
     int Count = StringCount("BBBB");
-    int b = rand();
     int a = 0;
 }
