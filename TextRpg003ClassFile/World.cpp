@@ -86,9 +86,18 @@ void UWorld::PlayerZonePlay(class UPlayer& _Player)
 	{
 		// ¿©±â
 
-		/*int Result =*/ TownZone0.InPlayer(_Player);
-		TownZone1.InPlayer(_Player);
-		FightZone.InPlayer(_Player);
+	
+	  int result =  TownZone0.InPlayer(_Player);
+	  
+	  if (result == 2)
+	  {
+		  FightZone.InPlayer(_Player);
+	  }
+	  else if (result == 3)
+	  {
+		  TownZone1.InPlayer(_Player);
+	  }
+
 	}
 
 }

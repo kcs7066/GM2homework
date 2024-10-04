@@ -3,7 +3,7 @@
 #include "Player.h"
 
 // 포인터나 레퍼런스는 무조건 8바이트 이기 때문에
-void UTown::InPlayer(class UPlayer& _Player)
+int UTown::InPlayer(class UPlayer& _Player)
 {
 	InMsgPrint();
 
@@ -34,13 +34,13 @@ void UTown::InPlayer(class UPlayer& _Player)
 
 			printf_s("2눌렀습니다.");
 			_getch();
-			return;
+			return 2;
 			break;
 		}
 		case '3':
 			printf_s("3눌렀습니다.");
 			_getch();
-			return;
+			return 3;
 		default:
 			break;
 		}
