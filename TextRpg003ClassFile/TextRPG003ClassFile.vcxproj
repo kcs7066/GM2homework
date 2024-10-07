@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{548CC98B-3A9B-493F-889E-3DA359715206}</ProjectGuid>
+    <ProjectGuid>{adac5a93-943b-4584-b3f9-66ad5dc26f57}</ProjectGuid>
     <RootNamespace>TextRPG003ClassFile</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -128,7 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="EngineConst.cpp" />
+    <ClCompile Include="ContentsConst.cpp" />
     <ClCompile Include="FightUnit.cpp" />
     <ClCompile Include="FightZone.cpp" />
     <ClCompile Include="Item.cpp" />
@@ -142,7 +142,7 @@
     <ClCompile Include="Zone.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EngineConst.h" />
+    <ClInclude Include="ContentsConst.h" />
     <ClInclude Include="FightUnit.h" />
     <ClInclude Include="FightZone.h" />
     <ClInclude Include="Item.h" />
